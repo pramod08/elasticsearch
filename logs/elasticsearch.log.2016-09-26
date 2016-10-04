@@ -1,0 +1,784 @@
+[2016-09-26 10:02:50,027][INFO ][node                     ] [Freakshow] version[2.4.0], pid[19688], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-09-26 10:02:50,030][INFO ][node                     ] [Freakshow] initializing ...
+[2016-09-26 10:02:50,869][INFO ][plugin.elasticfence      ] loading elasticfence plugin...
+[2016-09-26 10:02:50,870][INFO ][plugins                  ] [Freakshow] modules [reindex, lang-expression, lang-groovy], plugins [head, elasticfence], sites [head, elasticfence]
+[2016-09-26 10:02:50,909][INFO ][env                      ] [Freakshow] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [360.3gb], net total_space [454gb], spins? [possibly], types [ext4]
+[2016-09-26 10:02:50,909][INFO ][env                      ] [Freakshow] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-09-26 10:02:50,910][WARN ][env                      ] [Freakshow] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-09-26 10:02:51,212][INFO ][plugin.elasticfence      ] elasticfence.disabled: false
+[2016-09-26 10:02:51,212][INFO ][plugin.elasticfence      ] elasticfence.root.password: root1
+[2016-09-26 10:02:51,229][WARN ][plugin.elasticfence      ] "http.user.auth.whitelist" is deprecated. Please replace with "elasticfence.whitelist"
+[2016-09-26 10:02:51,229][WARN ][plugin.elasticfence      ] "http.user.auth.blacklist" is deprecated. Please replace with "elasticfence.blacklist"
+[2016-09-26 10:02:51,230][WARN ][plugin.elasticfence      ] elasticfence plugin IP whitelist enabled [127.0.0.1]
+[2016-09-26 10:02:51,231][WARN ][plugin.elasticfence      ] elasticfence plugin IP blacklist enabled []
+[2016-09-26 10:02:51,231][INFO ][plugin.elasticfence      ] elasticfence plugin is enabled
+[2016-09-26 10:02:54,037][INFO ][node                     ] [Freakshow] initialized
+[2016-09-26 10:02:54,037][INFO ][node                     ] [Freakshow] starting ...
+[2016-09-26 10:02:54,193][INFO ][transport                ] [Freakshow] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-09-26 10:02:54,201][INFO ][discovery                ] [Freakshow] elasticsearch/5_yexuQ7RAuNuVMwy9vomw
+[2016-09-26 10:02:57,285][INFO ][cluster.service          ] [Freakshow] new_master {Freakshow}{5_yexuQ7RAuNuVMwy9vomw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-09-26 10:02:57,307][INFO ][http                     ] [Freakshow] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-09-26 10:02:57,307][INFO ][node                     ] [Freakshow] started
+[2016-09-26 10:02:57,725][INFO ][gateway                  ] [Freakshow] recovered [3] indices into cluster_state
+[2016-09-26 10:03:00,011][INFO ][cluster.routing.allocation] [Freakshow] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[hi][2], [hi][3], [hi][4]] ...]).
+[2016-09-26 10:03:33,875][DEBUG][action.fieldstats        ] [Freakshow] [.kibana][0], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=DzVrf2KIRsWozew7mviktA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:03:33,876][DEBUG][action.fieldstats        ] [Freakshow] [hi][1], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=dAIc1FNaRwemTwqqlqTAEQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:03:33,875][DEBUG][action.fieldstats        ] [Freakshow] [hi][0], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=T_Xo2hU3QQmZiCWWdnKzGA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:03:33,882][DEBUG][action.fieldstats        ] [Freakshow] [hi][2], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=1jdx2rf8R8iJKQpHKNeYKA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:03:33,883][DEBUG][action.fieldstats        ] [Freakshow] [hi][3], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=a_QGdqcMTJietw4B_6YjOA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:03:33,886][DEBUG][action.fieldstats        ] [Freakshow] [hi][4], node[5_yexuQ7RAuNuVMwy9vomw], [P], v[12], s[STARTED], a[id=JUscoRkCSxq0fB_AWs7xzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@162f98cf]
+RemoteTransportException[[Freakshow][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:07:48,932][INFO ][node                     ] [Freakshow] stopping ...
+[2016-09-26 10:07:49,198][INFO ][node                     ] [Freakshow] stopped
+[2016-09-26 10:07:49,198][INFO ][node                     ] [Freakshow] closing ...
+[2016-09-26 10:07:49,255][INFO ][node                     ] [Freakshow] closed
+[2016-09-26 10:29:02,890][INFO ][node                     ] [Blue Marvel] version[2.4.0], pid[22222], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-09-26 10:29:02,890][INFO ][node                     ] [Blue Marvel] initializing ...
+[2016-09-26 10:29:04,984][INFO ][plugin.elasticfence      ] loading elasticfence plugin...
+[2016-09-26 10:29:04,997][INFO ][plugins                  ] [Blue Marvel] modules [reindex, lang-expression, lang-groovy], plugins [head, elasticfence], sites [head, elasticfence]
+[2016-09-26 10:29:05,144][INFO ][env                      ] [Blue Marvel] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [360.2gb], net total_space [454gb], spins? [possibly], types [ext4]
+[2016-09-26 10:29:05,144][INFO ][env                      ] [Blue Marvel] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-09-26 10:29:05,151][WARN ][env                      ] [Blue Marvel] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-09-26 10:29:05,942][INFO ][plugin.elasticfence      ] elasticfence.disabled: false
+[2016-09-26 10:29:05,943][INFO ][plugin.elasticfence      ] elasticfence.root.password: root1
+[2016-09-26 10:29:06,010][WARN ][plugin.elasticfence      ] "http.user.auth.whitelist" is deprecated. Please replace with "elasticfence.whitelist"
+[2016-09-26 10:29:06,010][WARN ][plugin.elasticfence      ] "http.user.auth.blacklist" is deprecated. Please replace with "elasticfence.blacklist"
+[2016-09-26 10:29:06,011][WARN ][plugin.elasticfence      ] elasticfence plugin IP whitelist enabled [127.0.0.1]
+[2016-09-26 10:29:06,011][WARN ][plugin.elasticfence      ] elasticfence plugin IP blacklist enabled []
+[2016-09-26 10:29:06,011][INFO ][plugin.elasticfence      ] elasticfence plugin is enabled
+[2016-09-26 10:29:10,069][INFO ][node                     ] [Blue Marvel] initialized
+[2016-09-26 10:29:10,070][INFO ][node                     ] [Blue Marvel] starting ...
+[2016-09-26 10:29:10,329][INFO ][transport                ] [Blue Marvel] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-09-26 10:29:10,344][INFO ][discovery                ] [Blue Marvel] elasticsearch/VZ7us_LiRdSTc4mdVm33jQ
+[2016-09-26 10:29:13,432][INFO ][cluster.service          ] [Blue Marvel] new_master {Blue Marvel}{VZ7us_LiRdSTc4mdVm33jQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-09-26 10:29:13,450][INFO ][http                     ] [Blue Marvel] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-09-26 10:29:13,451][INFO ][node                     ] [Blue Marvel] started
+[2016-09-26 10:29:14,254][INFO ][gateway                  ] [Blue Marvel] recovered [3] indices into cluster_state
+[2016-09-26 10:29:17,119][INFO ][cluster.routing.allocation] [Blue Marvel] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[hi][3], [hi][3]] ...]).
+[2016-09-26 10:32:54,240][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:32:54,265][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:32:54,240][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:32:54,241][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:32:54,241][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:32:54,241][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3cc8e33e]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,651][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,652][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,655][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,655][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,655][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:33:18,655][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@600797b2]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,274][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,275][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,275][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,275][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,274][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:35:41,276][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@72d361b5]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,334][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,334][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,334][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,337][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,337][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 10:36:06,337][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@3510d88b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,060][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,061][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,061][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,061][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,061][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:49:45,282][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@57332ad7]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,685][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,685][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,685][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,685][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,685][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 11:58:20,686][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@1e6c923b]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,312][DEBUG][action.fieldstats        ] [Blue Marvel] [.kibana][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=C-dx7I29RZGFfzTTd_crMw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,315][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][4], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=TWKo4VRYRyKaATSCldJkLA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,312][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][1], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=jgfbKoVOR_Cg4vB97rx9BA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,312][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][3], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=j8JlYxOdQgeW6SDENNHCHQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,312][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][2], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=Nxx5NxLQQFW6rHZceGsfzQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:05:14,312][DEBUG][action.fieldstats        ] [Blue Marvel] [hi][0], node[VZ7us_LiRdSTc4mdVm33jQ], [P], v[14], s[STARTED], a[id=K8d_1owxTRueq_3rU6-jsA]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@17c35f9f]
+RemoteTransportException[[Blue Marvel][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:18:14,935][INFO ][node                     ] [Blue Marvel] stopping ...
+[2016-09-26 12:18:15,393][INFO ][node                     ] [Blue Marvel] stopped
+[2016-09-26 12:18:15,393][INFO ][node                     ] [Blue Marvel] closing ...
+[2016-09-26 12:18:15,512][INFO ][node                     ] [Blue Marvel] closed
+[2016-09-26 12:31:06,415][INFO ][node                     ] [Hecate] version[2.4.0], pid[19014], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-09-26 12:31:06,416][INFO ][node                     ] [Hecate] initializing ...
+[2016-09-26 12:31:07,276][INFO ][plugin.elasticfence      ] loading elasticfence plugin...
+[2016-09-26 12:31:07,278][INFO ][plugins                  ] [Hecate] modules [reindex, lang-expression, lang-groovy], plugins [head, elasticfence], sites [head, elasticfence]
+[2016-09-26 12:31:07,315][INFO ][env                      ] [Hecate] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [359.4gb], net total_space [454gb], spins? [possibly], types [ext4]
+[2016-09-26 12:31:07,316][INFO ][env                      ] [Hecate] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-09-26 12:31:07,316][WARN ][env                      ] [Hecate] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-09-26 12:31:07,666][INFO ][plugin.elasticfence      ] elasticfence.disabled: false
+[2016-09-26 12:31:07,666][INFO ][plugin.elasticfence      ] elasticfence.root.password: root
+[2016-09-26 12:31:07,686][WARN ][plugin.elasticfence      ] "http.user.auth.whitelist" is deprecated. Please replace with "elasticfence.whitelist"
+[2016-09-26 12:31:07,686][WARN ][plugin.elasticfence      ] "http.user.auth.blacklist" is deprecated. Please replace with "elasticfence.blacklist"
+[2016-09-26 12:31:07,687][WARN ][plugin.elasticfence      ] elasticfence plugin IP whitelist enabled [127.0.0.1]
+[2016-09-26 12:31:07,687][WARN ][plugin.elasticfence      ] elasticfence plugin IP blacklist enabled []
+[2016-09-26 12:31:07,688][INFO ][plugin.elasticfence      ] elasticfence plugin is enabled
+[2016-09-26 12:31:09,884][INFO ][node                     ] [Hecate] initialized
+[2016-09-26 12:31:09,884][INFO ][node                     ] [Hecate] starting ...
+[2016-09-26 12:31:09,990][INFO ][transport                ] [Hecate] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-09-26 12:31:09,996][INFO ][discovery                ] [Hecate] elasticsearch/QPxp8k1WTJOcEPWs8R_TjA
+[2016-09-26 12:31:13,126][INFO ][cluster.service          ] [Hecate] new_master {Hecate}{QPxp8k1WTJOcEPWs8R_TjA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-09-26 12:31:13,174][INFO ][http                     ] [Hecate] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-09-26 12:31:13,175][INFO ][node                     ] [Hecate] started
+[2016-09-26 12:31:13,530][INFO ][gateway                  ] [Hecate] recovered [3] indices into cluster_state
+[2016-09-26 12:31:15,344][INFO ][cluster.routing.allocation] [Hecate] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[hi][2], [hi][1], [hi][0]] ...]).
+[2016-09-26 12:33:20,017][DEBUG][action.fieldstats        ] [Hecate] [.kibana][0], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=FjVS88VOSVSYV2VVkksbUQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:33:20,019][DEBUG][action.fieldstats        ] [Hecate] [hi][0], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=qrQw43byQN-GbWE2xfvpvQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:33:20,023][DEBUG][action.fieldstats        ] [Hecate] [hi][2], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=I4-Nq2kVRwaQxvtXxnfvKw]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:33:20,027][DEBUG][action.fieldstats        ] [Hecate] [hi][1], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=3Ogax4dOSyGhw51XP-d0xg]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:33:20,029][DEBUG][action.fieldstats        ] [Hecate] [hi][3], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=I77YqUrbSDiXCe9cBc_6yQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:33:20,047][DEBUG][action.fieldstats        ] [Hecate] [hi][4], node[QPxp8k1WTJOcEPWs8R_TjA], [P], v[16], s[STARTED], a[id=0lriCuJ8SA6V4Q-CwGYAmQ]: failed to execute [org.elasticsearch.action.fieldstats.FieldStatsRequest@6eb13936]
+RemoteTransportException[[Hecate][127.0.0.1:9300][indices:data/read/field_stats[s]]]; nested: IllegalArgumentException[field [created] doesn't exist];
+Caused by: java.lang.IllegalArgumentException: field [created] doesn't exist
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:166)
+	at org.elasticsearch.action.fieldstats.TransportFieldStatsTransportAction.shardOperation(TransportFieldStatsTransportAction.java:54)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-09-26 12:36:01,326][ERROR][plugin.elasticfence      ] username pramod is already registered
+[2016-09-26 12:59:21,826][INFO ][node                     ] [Hecate] stopping ...
+[2016-09-26 12:59:22,046][INFO ][node                     ] [Hecate] stopped
+[2016-09-26 12:59:22,046][INFO ][node                     ] [Hecate] closing ...
+[2016-09-26 12:59:22,071][INFO ][node                     ] [Hecate] closed
